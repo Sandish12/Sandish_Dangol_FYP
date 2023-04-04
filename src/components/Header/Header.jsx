@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-
-import { Container, Row, Col } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Container } from "reactstrap";
+import { NavLink } from "react-router-dom";
 import "../../styles/header.css";
 
 const navLinks = [
@@ -17,12 +16,10 @@ const navLinks = [
     path: "/rooms",
     display: "Rooms",
   },
-
   {
     path: "/contact",
     display: "Contact",
   },
-
   {
     path: "/login",
     display: "Login",
@@ -31,7 +28,6 @@ const navLinks = [
     path: "/newform",
     display: "Posts",
   },
- 
 ];
 
 const Header = () => {
@@ -66,15 +62,6 @@ const Header = () => {
                     {item.display}
                   </NavLink>
                 ))}
-              </div>
-            </div>
-
-            <div className="nav__right">
-              <div className="search__box">
-                <input type="text" placeholder="Search" />
-                <span>
-                  <i class="ri-search-line"></i>
-                </span>
               </div>
             </div>
           </div>
