@@ -5,7 +5,7 @@ import axios from "axios";
 
 const RegisterPage = () => {
 
-    const navigate=useNavigate();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,8 +19,8 @@ const RegisterPage = () => {
     axios.post("https://localhost:7111/api/user/register", formData)
       .then(response => {
         if (response.status === 200) {
-            navigate("/login"); // Redirect to the login page
-          }
+          navigate("/login"); // Redirect to the login page
+        }
       })
       .catch(error => {
         console.log(error);

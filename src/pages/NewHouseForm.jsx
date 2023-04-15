@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
 import axios from "axios";
+import React, { useState } from "react";
+import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from "reactstrap";
 
 const NewHouseForm = () => {
+  const [image, setImage] = useState();
   const [houseData, setHouseData] = useState({
     name: "",
     houseNumber: "",
@@ -16,6 +17,25 @@ const NewHouseForm = () => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setHouseData({ ...houseData, [name]: value });
+  };
+
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "Images");
+    formData.append('cloud_name', 'dcdiahbbe');
+
+    axios.post('https://api.cloudinary.com/v1_1/dcdiahbbe/image/upload', formData)
+      .then((response) => {
+        setImage(response.data.public_id);
+        setHouseData({ ...houseData, imageUrl: response.data.secure_url });
+      })
+      .catch((error) => {
+        console.error(error);
+        // Do something with error (e.g. show error message)
+      });
   };
 
   const handleSubmit = (event) => {
@@ -74,7 +94,7 @@ const NewHouseForm = () => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="rating">Rating*</Label>
+              <Label for="rating">Phone number*</Label>
               <Input
                 type="text"
                 name="rating"
@@ -98,14 +118,12 @@ const NewHouseForm = () => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="imageUrl">Image URL*</Label>
+              <Label for="image">Image*</Label>
               <Input
-                type="text"
-                name="imageUrl"
-                id="imageUrl"
-                placeholder="Enter image URL"
-                value={houseData.imageUrl}
-                onChange={handleInputChange}
+                type="file"
+                name="image"
+                id="image"
+                onChange={handleImageUpload}
                 required
               />
             </FormGroup>
@@ -121,13 +139,13 @@ const NewHouseForm = () => {
                 required
               />
             </FormGroup>
-                      <Button type="submit" color="primary">Submit
-                      </Button>
-                      </Form>
-    </Col>
-  </Row>
-        </Container>
-);
+            <Button type="submit" color="primary">Submit
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  );
 };
 
 export default NewHouseForm;

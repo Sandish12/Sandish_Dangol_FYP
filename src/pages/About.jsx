@@ -25,26 +25,26 @@ const About = () => {
             <Col lg="6" md="6" sm="12">
               <div className="about__page-content">
                 <h2 className="section__title">
-                  We Are Committed To Provide Safe Ride Solutions
+                  Small message to our renters
                 </h2>
 
                 <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
-                </p>
+                Dear Room Renters,
 
-                <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
+                We hope this message finds you well and that you're settling into your new space comfortably. We understand that finding a temporary living space can be challenging, and we're thrilled that you chose us to provide you with a comfortable and affordable accommodation.
+
+                We take pride in offering a wide range of room options to fit your unique needs and preferences. Whether you're here for work, school, or travel, our goal is to create a welcoming and stress-free environment that you can call home. We want you to feel comfortable and at ease during your stay, and we're always here to assist you with anything you may need.
+
+                Please don't hesitate to reach out to us if you have any questions or concerns. Our team is available around the clock to ensure that your stay is as enjoyable and hassle-free as possible. Thank you again for choosing us as your temporary home, and we hope you have a wonderful stay with us.
+
+                Best regards,
+
+
                 </p>
 
                 <div className=" d-flex align-items-center gap-3 mt-4">
                   <span className="fs-4">
-                    <i class="ri-phone-line"></i>
+                    <i className="ri-phone-line"></i>
                   </span>
 
                   <div>
@@ -54,13 +54,14 @@ const About = () => {
                 </div>
               </div>
             </Col>
+            
           </Row>
         </Container>
       </section>
 
-  
 
-      
+
+
     </Helmet>
   );
 };

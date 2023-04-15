@@ -12,31 +12,31 @@ import RoomListing from "./HouseList";
 const Home = () => {
   return (
     <Helmet title="Home">
-  
+
       <section className="p-0 hero__slider-section">
         <HeroSlider />
 
         <div className="hero__form">
           <Container>
             <Row className="form__row">
-              
+
 
               <Col lg="8" md="8" sm="12">
-                 <FindRoomForm /> 
+                <FindRoomForm />
               </Col>
             </Row>
           </Container>
-        
+
         </div>
       </section>
-    
-      <RoomListing/>
-      
+
+      <RoomListing />
+
       <About />
 
-   
 
-      
+
+
     </Helmet>
   );
 };

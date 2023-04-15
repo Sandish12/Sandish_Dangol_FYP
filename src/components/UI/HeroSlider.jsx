@@ -25,9 +25,9 @@ const HeroSlider = () => {
             <h4 className="text-light mb-3">View Top House Near You For Renting</h4>
             <h1 className="text-light mb-4">Reserve Now </h1>
 
-            <button className="btn reserve__btn mt-4">
-              <Link to="/rooms">Reserve Now</Link>
-            </button>
+            {/* <button className="btn reserve__btn mt-4">
+              <Link to="/">Reserve Now</Link>
+            </button> */}
           </div>
         </Container>
       </div>
@@ -37,9 +37,9 @@ const HeroSlider = () => {
             <h4 className="text-light mb-3">View Top House Near You For Renting</h4>
             <h1 className="text-light mb-4">Reserve Now </h1>
 
-            <button className="btn reserve__btn mt-4">
+            {/* <button className="btn reserve__btn mt-4">
               <Link to="/rooms">Reserve Now</Link>
-            </button>
+            </button> */}
           </div>
         </Container>
       </div>
@@ -49,9 +49,9 @@ const HeroSlider = () => {
             <h4 className="text-light mb-3">View Top House Near You For Renting</h4>
             <h1 className="text-light mb-4">Reserve Now </h1>
 
-            <button className="btn reserve__btn mt-4">
+            {/* <button className="btn reserve__btn mt-4">
               <Link to="/rooms">Reserve Now</Link>
-            </button>
+            </button> */}
           </div>
         </Container>
       </div>
@@ -61,9 +61,9 @@ const HeroSlider = () => {
             <h4 className="text-light mb-3">View Top House Near You For Renting</h4>
             <h1 className="text-light mb-4">Reserve Now </h1>
 
-            <button className="btn reserve__btn mt-4">
+            {/* <button className="btn reserve__btn mt-4">
               <Link to="/rooms">Reserve Now</Link>
-            </button>
+            </button> */}
           </div>
         </Container>
       </div>

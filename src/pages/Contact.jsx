@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <Helmet title="Contact">
       <CommonSection title="Contact" />
-      <section>
+      <section>s
         <Container>
           <Row>
             <Col lg="7" md="7">
@@ -81,7 +81,7 @@ const Contact = () => {
                       key={index}
                       className="social__link-icon"
                     >
-                      <i class={item.icon}></i>
+                      <i className={item.icon}></i>
                     </Link>
                   ))}
                 </div>

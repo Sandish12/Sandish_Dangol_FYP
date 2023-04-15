@@ -21,14 +21,18 @@ const navLinks = [
     display: "Contact",
   },
   {
-    path: "/login",
-    display: "Login",
-  },
-  { 
     path: "/newform",
     display: "Posts",
   },
+  
+
 ];
+const navLink = [
+{
+  path: "/login",
+  display: "Logout  ",
+},
+]
 
 const Header = () => {
   const menuRef = useRef(null);
@@ -38,7 +42,7 @@ const Header = () => {
   return (
     <header className="header">
       {/* ============ header top ============ */}
-     
+
 
       {/* ========== main navigation =========== */}
 
@@ -46,7 +50,7 @@ const Header = () => {
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <span className="mobile__menu">
-              <i class="ri-menu-line" onClick={toggleMenu}></i>
+              <i className="ri-menu-line" onClick={toggleMenu}></i>
             </span>
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
@@ -64,7 +68,21 @@ const Header = () => {
                 ))}
               </div>
             </div>
+            <div >
+                {navLink.map((item, index) => (
+                  <NavLink
+                    to={item.path}
+                    className={(navClass) =>
+                      navClass.isActive ? "nav__active nav__item" : "nav__item"
+                    }
+                    key={index}
+                  >
+                    {item.display}
+                  </NavLink>
+                ))}
+              </div>
           </div>
+      
         </Container>
       </div>
     </header>

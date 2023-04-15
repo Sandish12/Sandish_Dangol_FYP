@@ -1,43 +1,53 @@
-.booking__form {
+/* Booking Form */
+.booking-form {
   width: 47.5%;
 }
 
-.booking__form input {
-  padding: 8px 15px;
-  border: 1px solid #7c8a972a;
-  color: #7c8a97;
-  width: 100%;
-}
-
-.booking__form select,
-.textarea {
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  display: block;
   width: 100%;
   padding: 10px 15px;
-  color: #7c8a97;
+  font-size: 1rem;
   border: 1px solid #7c8a972a;
   border-radius: 4px;
+  color: #7c8a97;
+  margin-bottom: 1rem;
 }
 
-.time__picker::before {
+.booking-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("down-arrow.svg") no-repeat right center / 10%;
+}
+
+.booking-form input::placeholder,
+.booking-form select option[disabled] {
+  color: #7c8a972a;
+}
+
+.time-picker::before {
   content: "Journey Time";
   color: #7c8a97;
   margin-right: 0.5rem;
 }
 
-.textarea:focus,
-.booking__form input:focus,
-.booking__form select:focus {
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
   outline: none;
 }
 
 @media only screen and (max-width: 768px) {
-  .booking__form {
+  .booking-form {
     width: 100%;
   }
 
-  .booking__form input,
-  .textarea,
-  .booking__form select {
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea {
     font-size: 0.8rem;
   }
 }

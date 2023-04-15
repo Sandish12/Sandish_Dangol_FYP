@@ -1,23 +1,56 @@
-.social__link-icon {
-  text-decoration: none;
+:root {
+  --color-primary: #0066cc;
+  --border-radius: 8px;
+}
 
-  color: #000d6b;
+.social-link {
+  display: inline-block;
+  align-items: center;
+  margin-right: 10px;
+  color: var(--color-primary);
   font-weight: 500;
   font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
-.contact__btn {
-  padding: 7px 15px;
-  background: #000d6b;
+.social-link:hover {
+  color: #004c99;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
   color: #fff;
   border: none;
-  outline: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (max-width: 768px) {
-  .contact__btn {
-    margin-bottom: 40px;
+.contact-btn:hover {
+  background-color: #004c99;
+}
+
+.contact-btn:active {
+  background-color: #004c99;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-btn {
+    margin-bottom: 20px;
     font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .social-link {
+    margin-bottom: 10px;
+    font-size: 1rem;
   }
 }

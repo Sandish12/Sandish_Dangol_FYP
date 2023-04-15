@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+// import React, { useState } from "react";
+import { message } from "antd";
 import axios from "axios";
+import { useState } from "react";
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+
+const LoginPage = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -18,11 +22,30 @@ const LoginPage = () => {
     setPassword(event.target.value);
   };
 
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
     setErrorMessage("");
 
+    //   try {
+    //     const isLoggedIn = await axios.post("https://localhost:7111/api/user/login", {
+    //       email,
+    //       password,
+    //     });
+
+    //     if (isLoggedIn) {
+    //       navigate('/home');
+    //     } else {
+    //       message.error("Invalid email or password");
+    //     }
+    //   } catch (error) {
+    //     console.error(error);
+    //   } finally {
+    //     setIsLoading(false);
+    //   }
+    // };
     try {
       const response = await axios.post("https://localhost:7111/api/user/login", {
         email,
@@ -30,7 +53,7 @@ const LoginPage = () => {
       });
 
       if (response.status === 200) {
-        navigate("/");
+        navigate("/home");
       } else {
         setErrorMessage("Invalid email or password");
       }

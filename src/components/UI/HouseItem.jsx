@@ -1,8 +1,7 @@
 // import React, { useEffect, useState } from "react";
-import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import { Col } from "reactstrap";
 import "../../styles/room-item.css";
-import axios from "axios";
 
 
 
@@ -13,7 +12,7 @@ const HouseItem = (props) => {
     <Col lg="4" md="6" sm="6" className="mb-5">
       <div className="room__item">
         <div className="house__img">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7F9WwkpYk2BMRGUk6neESe39eHfARg1eoJhxGxB4r&s" alt="" className="w-100" />
+          <img src={house.imageUrl} alt="" className="w-100" />
         </div>
 
         <div className="room__item-content mt-4">
@@ -36,7 +35,7 @@ const HouseItem = (props) => {
 
           <div className="room__item-desc">{house.description}</div>
 
-        
+
           <button className="w-50 room__item-btn room__btn-details">
             <Link to={`/house/${house.id}`}>Details</Link>
           </button>

@@ -41,18 +41,20 @@ const Footer = () => {
             <div className="logo footer__logo">
               <h1>
                 <Link to="/home" className=" d-flex align-items-center gap-2">
-                <i class="ri-hotel-bed-line"></i>
+                  <i className="ri-hotel-bed-line"></i>
                   <span>
-                    House Rent <br /> Service
+                    Room Rent <br /> Service
                   </span>
                 </Link>
               </h1>
             </div>
             <p className="footer__logo-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur, distinctio, itaque reiciendis ab cupiditate harum ex
-              quam veniam, omnis expedita animi quibusdam obcaecati mollitia?
-              Delectus et ad illo recusandae temporibus?
+            The act of renting out a room in a house, usually for a brief time, is referred to as room rental. 
+            This is a well-liked choice for persons looking for inexpensive housing, travelers, students, and 
+            people moving between residences. Since renting a room allows people to split living costs with others, 
+            it can be more affordable than traditional renting. When selecting a room to rent, it is critical to carefully 
+            examine one's demands and budget because there are a variety of room rentals available that can differ in terms 
+            of length of stay, amenities offered, and location.
             </p>
           </Col>
           <Col>
@@ -71,14 +73,14 @@ const Footer = () => {
             </div>
           </Col>
 
-          
 
-          
+
+
 
           <Col lg="12">
             <div className="footer__bottom">
               <p className="section__description d-flex align-items-center justify-content-center gap-1 pt-4">
-                <i class="ri-copyright-line"></i>Copyright {year}, Developed by
+                <i className="ri-copyright-line"></i>Copyright {year}, Developed by
                 Sandish Dangol. All rights reserved.
               </p>
             </div>
